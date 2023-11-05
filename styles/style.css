@@ -11,6 +11,12 @@
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 
+.cover {
+  display: grid;
+  padding: clamp(10px, 0.0286rem + 2.5445vw, 20px);
+  min-block-size: 100vh;
+}
+
 .decor__shadow {
   text-shadow: 2px 2px 0 var(--accent-color, #ff0070);
 }
@@ -42,6 +48,7 @@
   background-image: var(--page-background-image, url("../images/cover-image.png"));
   background-position: center;
   background-size: cover;
+  align-items: start;
 }
 
 .header_footer__title {
@@ -49,7 +56,6 @@
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 82.5%;
-  text-shadow: 4px 4px 0 var(--accent-color, #ff0070);
 }
 
 .header__text {
@@ -59,9 +65,9 @@
   font-size: inherit;
   line-height: inherit;
   background: var(--accent-color, #ff0070);
-  justify-self: end;
-  inline-size: clamp(364px, calc(100% / 2 - 10px), 491px);
 }
+
+/* Стилизация rec индикатора начало  */
 
 .rec__decor {
   position: absolute;
@@ -89,6 +95,10 @@
   block-size: 9px;
 }
 
+/* Стилизация rec индикатора конец  */
+
+/* Стилизация уголков начало */
+
 .decorated-zone {
   position: relative;
 }
@@ -102,18 +112,20 @@
 }
 
 .decorated-zone::before {
-  border-inline-end: 1px solid var(--secondary-color, #ff0070);
-  border-block-start: 1px solid var(--secondary-color, #ff0070);
+  border-inline-end: 1px solid var(--second-color, #ff0070);
+  border-block-start: 1px solid var(--second-color, #ff0070);
   inset-inline-end: clamp(10px, 0.0286rem + 2.5445vw, 20px);
   inset-block-start: clamp(10px, 0.0286rem + 2.5445vw, 20px);
 }
 
 .decorated-zone::after {
-  border-inline-start: 1px solid var(--secondary-color, #ff0070);
-  border-block-end: 1px solid var(--secondary-color, #ff0070);
+  border-inline-start: 1px solid var(--second-color, #ff0070);
+  border-block-end: 1px solid var(--second-color, #ff0070);
   inset-inline-start: clamp(10px, 0.0286rem + 2.5445vw, 20px);
   inset-block-end: clamp(10px, 0.0286rem + 2.5445vw, 20px);
 }
+
+/* Стилизация rec индикатора конец */
 
 /* Стилизация кнопок выбора темы начало */
 
@@ -183,12 +195,34 @@
   gap: 10px;
 }
 
+.title {
+  color: var(--second-color, #ff0070);
+  font-weight: 700;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.title__decor {
+  color: var(--themelight-color, #000028);
+  background: var(--accent-color, #ff0070);
+}
+
+.section__advices_title {
+  margin-block-end: 20px;
+}
+
+.subarticle__title  {
+  font-weight: 400;
+  font-size: inherit;
+  line-height: inherit;
+}
+
 .pictures__list {
   display: grid;
   gap: 10px;
 }
 
-.pictures__list_item {
+.pictures__list_item_img {
   display: block;
   object-fit: cover;
   object-position: center;
@@ -259,7 +293,7 @@
     margin-block-end: 70px;
   }
 
-  .header__title {
+  .header__text {
     justify-self: end;
     inline-size: clamp(364px, calc(100% / 2 - 10px), 491px);
   }
@@ -271,7 +305,7 @@
 }
 
 @media (width >= 1024px) {
-  .page-title {
+  .header_footer__title {
     text-shadow: 4px 4px 0 var(--color-purple-2, #ff0070);
   }
 
@@ -279,7 +313,7 @@
     column-gap: 30px;
   }
 
-  .section-what__articles-list {
+  .section__reasons_list {
     grid-template-columns: repeat(3, 1fr);
   }
 
