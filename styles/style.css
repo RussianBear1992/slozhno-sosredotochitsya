@@ -113,14 +113,18 @@
 
 /* Стилизация кнопок выбора темы начало */
 
+.header {
+  align-items: start;
+}
+
 .header__theme-menu {
   margin-block: 65px;
-  justify-self: center;
+  justify-self: end;
 }
 
 .header__theme-menu-list {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 12px;
 }
 
