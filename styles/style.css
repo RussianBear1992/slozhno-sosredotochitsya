@@ -21,22 +21,6 @@
   text-shadow: 2px 2px 0 var(--accent-color, #ff0070);
 }
 
-.link {
-  text-decoration: none;
-}
-
-.link:hover {
-  text-decoration: underline;
-}
-
-.link:focus {
-  outline: 0;
-}
-
-.link:focus-visible {
-  outline: 1px solid currentColor;
-}
-
 /* Глобальные стили конец */
 
 /* Стилизация шапки начало */
@@ -177,6 +161,22 @@
   gap: 20px;
 }
 
+.link {
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.link:focus {
+  outline: 0;
+}
+
+.link:focus-visible {
+  outline: 1px solid currentColor;
+}
+
 .section__pictures {
   gap: 10px;
 }
@@ -230,6 +230,9 @@
   inline-size: 100%;
 }
 
+
+/* Стилизация main и footer начало */
+
 .main {
   display: grid;
   gap: 50px;
@@ -239,6 +242,8 @@
 .footer {
   place-items: center;
 }
+
+/* Стилизация main и footer конец */
 
 /* Медиазапросы на транформацию интерфейса в зависимости от разрешения начало */
 
